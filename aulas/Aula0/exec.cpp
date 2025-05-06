@@ -5,6 +5,7 @@ using namespace std;
 // variable => type and name and value => int age = 20;
 // endl => new line
 // cin => input from console
+// Executável: g++ nome arquivo .pp -o nome do executavel
 
 int main() {
   int age;
