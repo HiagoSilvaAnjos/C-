@@ -17,7 +17,12 @@ void mediaGeralAunos (Aluno alunos[], int tamanhoTurma) {
         somaNotas += (alunos[index].nota1 + alunos[index].nota2);
     };
 
-    cout << "Media Geral: " << (somaNotas/(tamanhoTurma * 2)) << endl;
+      if (tamanhoTurma == 0) {
+        cout << "qualquer coisa" << endl;
+    } else {
+        cout << "Media Geral: " << (somaNotas/(tamanhoTurma * 2)) << endl;
+    }
+
 
 }
 
@@ -35,7 +40,7 @@ void mediaGeralMasculino (Aluno alunos[], int tamanhoTurma) {
     };
 
     if (totalAlunosMasculino == 0) {
-        cout << "qualquer coisa";
+        cout << "qualquer coisa" << endl;
     } else {
         cout << "Media Geral MAsculino: " << (somaNotas/(totalAlunosMasculino * 2)) << endl;
     }
@@ -58,7 +63,7 @@ void mediaGeralFeminino (Aluno alunos[], int tamanhoTurma) {
 
 
     if (totalAlunosFeminino == 0) {
-        cout << "qualquer coisa";
+        cout << "qualquer coisa" << endl;
     } else {
         cout << "Media Geral Feminino: " << (somaNotas/(totalAlunosFeminino * 2)) << endl;
     }
