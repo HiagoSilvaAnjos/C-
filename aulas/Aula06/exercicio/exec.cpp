@@ -15,8 +15,8 @@ void selection_sort(memes vetor[], int tam) {
         menor = indice;
 
         // Encontrar o menor elemento no restante do vetor
-        for (int j = indice + 1; j < tam; j++) { // Corrigido: `j < tam`
-            if (vetor[j].num_meme < vetor[menor].num_meme) { // Corrigido: `<` para encontrar o menor
+        for (int j = indice + 1; j < tam; j++) { 
+            if (vetor[j].num_meme < vetor[menor].num_meme) { 
                 menor = j;
             }
         }
@@ -42,7 +42,7 @@ void entrada (memes v[], int total){
 void imprimi (memes v[], int total){
     cout << "Memes cadastrados:" << endl;
     for (int i = 0; i<total;i++){
-        cout<<v[i].num_meme<<" "<<v[i].nome_arq<<" ";
+        cout<<v[i].num_meme<<" "<<v[i].nome_arq<<" " << " ";
         cout<<v[i].assunto<<" "<<v[i].site<<endl;
     }
 }
@@ -55,22 +55,20 @@ int main(){
 
     entrada(v,tamanho);
 
-    cout << "Digite o site que deseja buscar: ";
+    cout << "Digite o site que deseja buscar: " << endl;
     cin >>busca;
 
+    cout << "Memes encontrados no site " << busca << endl;
     for (int i = 0; i < tamanho; i++) {
         
         if(v[i].site == busca) {
             selection_sort(v, tamanho);
-        }
-
+            cout << v[i].num_meme << " " << v[i].nome_arq << " " << v[i].assunto << " " << v[i].site << endl;
+            }
     }
 
     cout << endl;
 
     imprimi(v,tamanho);
-
-    //selection_sort(v,tamanho);
-
     return 0;
 }
